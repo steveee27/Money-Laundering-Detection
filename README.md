@@ -17,7 +17,7 @@ The dataset aims to simulate a real-world scenario where a small subset of indiv
 - [Model Performance](#model-performance)
 - [Conclusion](#conclusion)
 - [Acknowledgement](#acknowledgement)
-- [Authors](#authors)
+- [Contributors](#contributors)
 - [License](#license)
 
 ## Money Laundering Cycle
@@ -108,7 +108,7 @@ Both Random Forest and XGBoost classifiers typically exhibit superior performanc
 
 This project is part of the **Preliminary Round of the Data Science Competition Olympiad 2023**, organized by the **Data Science Club of Binus University**.
 
-## Authors
+## Contributors
 - [Steve Marcello Liem](https://github.com/steveee27)
 - [Davin Edbert Santoso Halim](https://github.com/Eddesh)
 - [Brandon Ritchie Yang](https://github.com/shdwshftr)

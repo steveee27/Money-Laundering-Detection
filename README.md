@@ -98,9 +98,6 @@ The following table summarizes the performance of the models after testing on th
 | **XGBoost**          | 0     | 0.91      | 0.84   | 0.87     | 0.88     | 0.8687        |
 |                     | 1     | 0.85      | 0.92   | 0.88     |          |               |
 
-- Class 0 represents non-laundering (legitimate) transactions. These are normal financial transactions that do not involve money laundering activities.
-- Class 1 represents laundering (suspicious or illicit) transactions. These transactions are flagged as potentially related to money laundering, where criminals attempt to conceal the origins of illegally obtained funds.
-
 ## Conclusion
 
 This dataset allows for robust analysis of money laundering activities, providing insights into financial behaviors that could help authorities detect and prevent illicit financial transactions. Through effective data preprocessing, machine learning models can be trained to flag suspicious activities, helping reduce the prevalence of financial crime. The adoption of undersampling in testing the prior model from the original dataset (HI-Large_Trans) with the new dataset (LI-Large_Trans) was crucial due to class imbalance, ensuring a balanced representation between money laundering and non-money laundering transactions. 

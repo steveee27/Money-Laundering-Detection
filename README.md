@@ -1,4 +1,4 @@
-# Financial Transaction Data for Anti-Money Laundering (AML) Detection
+# Detecting Anti-Money Laundering (AML) Activities Using Machine Learning Techniques
 
 ## Introduction
 

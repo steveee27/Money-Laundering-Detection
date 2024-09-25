@@ -13,12 +13,12 @@ The dataset aims to simulate a real-world scenario where a small subset of indiv
 - [Dataset Features](#dataset-features)
 - [Data Preprocessing Steps](#data-preprocessing-steps)
 - [Model Training](#model-training)
-- [Analysis](#analysis)
-- [Key Insights](#key-insights)
+- [Model Performance](#model-performance)
+- [Analysis and Key Insights](#analysis-and-key-insights)
 - [Conclusion](#conclusion)
-- [Requirements](#requirements)
-- [Instructions](#instructions)
 - [Acknowledgement](#acknowledgement)
+- [Authors](#authors)
+- [License](#license)
 
 ## Money Laundering Cycle
 
@@ -55,49 +55,50 @@ The primary goal is to employ machine learning and data analysis techniques to d
 
 ## Model Training
 
-The dataset is split into training and test sets to ensure unbiased model evaluation. Machine learning algorithms will be applied to predict the `Is Laundering` variable, helping identify suspicious transactions that may indicate money laundering.
+The training process used the **HI-Large_Trans** dataset, while the **LI-Large_Trans** dataset was employed to test the models. The models used in this project include:
 
-## Analysis
+- **Random Forest Classifier**
+- **XGBoost Classifier**
 
-- **Exploratory Data Analysis (EDA)**: Histograms, boxplots, and scatter plots are used to understand data distributions and correlations between transaction amounts.
-- **Outliers**: Significant outliers in `Amount Received` and `Amount Paid` indicate unusual transactions, which are crucial for identifying money laundering patterns.
-- **Correlation Analysis**: A strong correlation exists between `Amount Received` and `Amount Paid`, providing insights into typical versus suspicious financial behaviors.
+## Model Performance
+   
+The following table summarizes the performance of the models after testing on the **LI-Large_Trans** dataset:
+   
+   | Model               | Class | Precision | Recall | F1-Score | Accuracy | ROC AUC Score |
+   |---------------------|-------|-----------|--------|----------|----------|---------------|
+   | **Random Forest**    | 0     | 0.91      | 0.81   | 0.86     | 0.87     | 0.8687        |
+   |                     | 1     | 0.83      | 0.92   | 0.87     |          |               |
+   | **XGBoost**          | 0     | 0.91      | 0.84   | 0.87     | 0.88     | 0.8687        |
+   |                     | 1     | 0.85      | 0.92   | 0.88     |          |               |
 
-## Key Insights
+- Class 0 represents non-laundering (legitimate) transactions. These are normal financial transactions that do not involve money laundering activities.
+- Class 1 represents laundering (suspicious or illicit) transactions. These transactions are flagged as potentially related to money laundering, where criminals attempt to conceal the origins of illegally obtained funds.
 
-- The ACH payment format is the most commonly used for both laundering and non-laundering transactions.
-- Money laundering transactions frequently involve USD as both receiving and payment currency.
-- Certain banks and accounts exhibit higher transaction frequencies, which could be indicative of repeated or organized laundering activities.
+## Analysis and Key Insights
+
+- **Exploratory Data Analysis (EDA)**: Histograms, boxplots, and scatter plots were used to understand data distributions and correlations between transaction amounts. The analysis revealed key outliers in `Amount Received` and `Amount Paid`, which indicate unusual transactions. Outliers are crucial for identifying money laundering patterns.
+  
+- **Correlation Analysis**: A strong correlation exists between `Amount Received` and `Amount Paid`, suggesting that transactions with larger amounts tend to show clearer signs of potential laundering activities.
+
+- **Key Insights**:
+  - The ACH payment format is the most commonly used for both laundering and non-laundering transactions.
+  - Money laundering transactions frequently involve USD as both receiving and payment currency.
+  - Certain banks and accounts exhibit higher transaction frequencies, which could be indicative of repeated or organized laundering activities.
 
 ## Conclusion
 
-This dataset allows for robust analysis of money laundering activities, providing insights into financial behaviors that could help authorities detect and prevent illicit financial transactions. Through effective data preprocessing, machine learning models can be trained to flag suspicious activities, helping reduce the prevalence of financial crime.
+This dataset allows for robust analysis of money laundering activities, providing insights into financial behaviors that could help authorities detect and prevent illicit financial transactions. Through effective data preprocessing, machine learning models can be trained to flag suspicious activities, helping reduce the prevalence of financial crime. The adoption of undersampling in testing the prior model from the original dataset (HI-Large_Trans) with the new dataset (LI-Large_Trans) was crucial due to class imbalance, ensuring a balanced representation between money laundering and non-money laundering transactions. 
 
-## Requirements
-
-- Python 3.x
-- Libraries:
-  - pandas
-  - numpy
-  - scikit-learn
-  - matplotlib
-  - seaborn
-
-## Instructions
-
-1. **Data Preprocessing**: Use the provided Python scripts to clean and preprocess the dataset (including undersampling and encoding).
-2. **Model Training**: Train machine learning models using the processed data and evaluate performance on the test set.
-3. **Visualization**: Use visualizations to understand the data distribution and highlight potential laundering transactions.
-4. **Model Evaluation**: Evaluate the trained models using standard metrics such as accuracy, precision, recall, and F1-score to determine their effectiveness in identifying money laundering activities.
+Both Random Forest and XGBoost classifiers typically exhibit superior performance compared to other models because of their ensemble learning techniques, adeptness in managing complex relationships in data, and ability to handle missing values. However, despite similar column names between the datasets, slight variations in the data's underlying patterns or distribution might result in a minor accuracy reduction when deploying the model on the new dataset. This occurrence could stem from unseen outliers, variations in feature-target relationships, or subtle differences in the data's statistical properties. Overall, while these models excel in various aspects, model performance might slightly vary when applied to new, unseen datasets with similar column structures.
 
 ## Acknowledgement
 
-This project is part of the **Data Science Competition Olympiad 2023**, organized by the **Data Science Club of Binus University**.
+This project is part of the **Preliminary Round of the Data Science Competition Olympiad 2023**, organized by the **Data Science Club of Binus University**.
 
 ## Authors
 - [Steve Marcello Liem](https://github.com/steveee27)
-- Davin Edbert Santoso Halim
-- Brandon Ritchie Yang
+- [Davin Edbert Santoso Halim](https://github.com/Eddesh)
+- [Brandon Ritchie Yang](https://github.com/shdwshftr)
   
 ## License
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.

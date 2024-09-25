@@ -93,3 +93,11 @@ This dataset allows for robust analysis of money laundering activities, providin
 ## Acknowledgement
 
 This project is part of the **Data Science Competition Olympiad 2023**, organized by the **Data Science Club of Binus University**.
+
+## Authors
+- [Steve Marcello Liem](https://github.com/steveee27)
+- Davin Edbert Santoso Halim
+- Brandon Ritchie Yang
+  
+## License
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.

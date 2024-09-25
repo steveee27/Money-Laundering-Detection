@@ -1,5 +1,11 @@
 # Financial Transaction Data for Anti-Money Laundering (AML) Detection
 
+## Introduction
+
+This project focuses on detecting potential money laundering activities within a dataset of synthesized financial transactions provided by **IBM (International Business Machines Corporation)**. These transactions represent interactions between individuals, businesses, and banks, covering a wide range of financial activities such as consumer purchases, industrial orders, salary payments, loan repayments, and more.
+
+The dataset aims to simulate a real-world scenario where a small subset of individuals and businesses are involved in illicit activities like smuggling, illegal gambling, and extortion. The project follows the **money laundering cycle**—**Placement**, **Layering**, and **Integration**—which criminals use to obscure the origins of illegally obtained funds. The primary objective of this project is to utilize data analysis and machine learning techniques to help authorities identify and distinguish potential money laundering cases hidden within the legitimate financial transactions.
+
 ## Table of Contents
 - [Introduction](#introduction)
 - [Money Laundering Cycle](#money-laundering-cycle)
@@ -13,12 +19,6 @@
 - [Requirements](#requirements)
 - [Instructions](#instructions)
 - [Acknowledgement](#acknowledgement)
-
-## Introduction
-
-This project focuses on detecting potential money laundering activities within a dataset of synthesized financial transactions provided by **IBM (International Business Machines Corporation)**. These transactions represent interactions between individuals, businesses, and banks, covering a wide range of financial activities such as consumer purchases, industrial orders, salary payments, loan repayments, and more.
-
-The dataset aims to simulate a real-world scenario where a small subset of individuals and businesses are involved in illicit activities like smuggling, illegal gambling, and extortion. The project follows the **money laundering cycle**—**Placement**, **Layering**, and **Integration**—which criminals use to obscure the origins of illegally obtained funds. The primary objective of this project is to utilize data analysis and machine learning techniques to help authorities identify and distinguish potential money laundering cases hidden within the legitimate financial transactions.
 
 ## Money Laundering Cycle
 
